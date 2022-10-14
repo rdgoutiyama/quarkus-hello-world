@@ -28,6 +28,7 @@ public class ExampleResourceTest {
             .pathParam("name", uuid.toString())
             .get("/hello/greeting/{name}")
             .then()
+            
                 .statusCode(200)
                 .body(is("Hello " + uuid.toString()));
     }
